@@ -1,0 +1,46 @@
+#! /bin/bash
+
+# Small script to automate generating
+# a stripped PDF from an URL
+
+## CHECKS
+# exit on any error
+set -e
+
+################
+## START SCRIPT
+
+# STARTUP
+echo "\n"
+echo "=---------------"
+echo "= PERCOLLATE PDF"
+echo "= efls"
+echo ""
+
+# Read URL
+echo "----------\n"
+echo "Enter URL:"
+read -r url
+
+# Read filename
+echo "-----------\n"
+echo "Enter name:"
+read -r name
+
+# Generate date string
+tag=$(date +%Y" "%m" "%d)
+
+# Generate destination filename
+filename="$tag $name.pdf"
+
+echo "Destination is $filename"
+echo "------------------------\n"
+
+# Run percollate
+echo "Now percollate!"
+percollate pdf --template html.html --style css.css -o "$filename" "$url"
+
+echo "\n"
+echo "Opening $filename..."
+open "$filename"
+

@@ -28,7 +28,7 @@ echo "Enter name:"
 read -r name
 
 # Generate date string
-tag=$(date +%Y" "%m" "%d)
+tag=$(date +%Y-%m-%d)
 
 # Generate destination filename
 filename="$tag $name.pdf"

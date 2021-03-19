@@ -41,13 +41,15 @@ a {
 	color: inherit;
 }
 
-a:not(.no-href):after {
-	content: ' → ' attr(href) '';
-	font-size: 0.8em;
-	word-break: break-all;
-	word-wrap: break-word;
-	font-family: var(--alt-font);
-}
+/* Disable inline link printing */
+/* a:not(.no-href):after { */
+/*         display: none; */
+/*         content: ' → ' attr(href) ''; */
+/* 	font-size: 0.8em; */
+/* 	word-break: break-all; */
+/* 	word-wrap: break-word; */
+/* 	font-family: var(--alt-font); */
+/* } */
 
 /*
 	Going on a limb here,
@@ -137,12 +139,13 @@ article:not(:last-of-type) {
 	max-width: 100%;
 	display: block;
 	margin: 0 auto;
+        padding: 1em;
 }
 
 .article__content figure {
 	display: block;
 	margin: 1.5em 0;
-	padding: 0;
+	padding: 1em;
 	text-align: center;
 }
 
@@ -155,6 +158,7 @@ article:not(:last-of-type) {
 
 .article__content figure blockquote {
 	text-align: left;
+        padding-left: 2em;
 }
 
 .article__content table,
@@ -195,7 +199,8 @@ article:not(:last-of-type) {
 	Indent all subsequent paragraphs.
  */
 .article__content p + p {
-	text-indent: 1em;
+	/* text-indent: 1em; */
+        padding-top: 0.5em;
 }
 
 /*

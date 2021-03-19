@@ -43,7 +43,7 @@ echo "------------------------\n"
 
 # Run percollate
 echo "Now percollate!"
-percollate pdf --template ./html.html --style ./css.css -o "$filename" "$url"
+percollate pdf --no-amp --template ./html.html --style ./css.css -o "$filename" "$url"
 
 echo "\n"
 echo "Opening $filename..."

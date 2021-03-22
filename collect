@@ -7,6 +7,9 @@
 # exit on any error
 set -e
 
+# Where should files ultimately be moved?
+dest_dir=$HOME"/syncthing/Inbox - Longreads"
+
 ################
 ## START SCRIPT
 
@@ -45,7 +48,10 @@ echo "------------------------\n"
 echo "Now percollate!"
 percollate pdf --no-amp --template ./html.html --style ./css.css -o "$filename" "$url"
 
+echo "Moving PDF to $dest_dir..."
+mv "$filename" "$dest_dir"
+
 echo "\n"
 echo "Opening $filename..."
-open "$filename"
+open "$dest_dir/$filename"
 

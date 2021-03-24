@@ -203,6 +203,10 @@ article:not(:last-of-type) {
         padding-top: 0.5em;
 }
 
+.article__content div + div {
+        padding-top: 1.5em;
+}
+
 /*
 	Fixes the text indent for images
 	that get wrapped in a <p> tag

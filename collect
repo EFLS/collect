@@ -8,7 +8,7 @@
 set -e
 
 # Where should files ultimately be moved?
-dest_dir=$HOME"/syncthing/Inbox - Longreads"
+dest_dir=$HOME"/files/syncthing/Inbox/"
 
 ################
 ## START SCRIPT
